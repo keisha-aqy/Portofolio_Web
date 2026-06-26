@@ -1,7 +1,3 @@
-/* ============================================
-   PORTFOLIO — script.js
-   ============================================ */
-
 /* ── 1. NAVBAR: shadow on scroll ── */
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
@@ -108,21 +104,35 @@ function buildMarqueeItems() {
     .join('');
 }
 
-// Duplicate items to create seamless loop
 marqueeTrack.innerHTML = buildMarqueeItems() + buildMarqueeItems();
 
-/* ── 4. PROJECT FILTER TABS ── */
+/* ── 4. ABOUT IMAGE SWITCHER (Blink Effect) ── */
+const aboutPhotos = document.querySelectorAll('.about-photo');
+let currentPhotoIndex = 0;
+
+function switchPhoto() {
+  // Hilangkan kelas active dari foto saat ini
+  aboutPhotos[currentPhotoIndex].classList.remove('active');
+  
+  // Pindah ke foto berikutnya
+  currentPhotoIndex = (currentPhotoIndex + 1) % aboutPhotos.length;
+  
+  // Tambahkan kelas active ke foto berikutnya
+  aboutPhotos[currentPhotoIndex].classList.add('active');
+}
+
+// Ganti gambar setiap 3 detik
+setInterval(switchPhoto, 3000);
+
+/* ── 5. PROJECT FILTER TABS ── */
 const filterBtns  = document.querySelectorAll('.tag-btn');
 const projectCards = document.querySelectorAll('#projGrid .proj-card');
 
 filterBtns.forEach(btn => {
   btn.addEventListener('click', function () {
-    // Update active state
     filterBtns.forEach(b => b.classList.remove('active'));
     this.classList.add('active');
-
     const filter = this.dataset.f;
-
     projectCards.forEach(card => {
       if (filter === 'all' || card.dataset.t === filter) {
         card.style.display = '';
@@ -133,13 +143,13 @@ filterBtns.forEach(btn => {
   });
 });
 
-/* ── 5. FADE-UP ON SCROLL (Intersection Observer) ── */
+/* ── 6. FADE-UP ON SCROLL (Intersection Observer) ── */
 const fadeObserver = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        fadeObserver.unobserve(entry.target); // hanya animasi sekali
+        fadeObserver.unobserve(entry.target);
       }
     });
   },
@@ -148,13 +158,9 @@ const fadeObserver = new IntersectionObserver(
 
 document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
 
-/* ── 6. CONTACT FORM — EmailJS ── */
-  
-  const EJS_PUBLIC_KEY   = 'jFhFa0MX035yi3OGF';    
-  const EJS_SERVICE_ID   = 'service_80718gu';    
-  const EJS_TEMPLATE_ID  = 'template_qqe2x98';  
-
-  emailjs.init(EJS_PUBLIC_KEY);
+/* ── 7. CONTACT FORM — EmailJS ── */
+(function() {
+  emailjs.init('jFhFa0MX035yi3OGF'); // Public Key Anda
 
   const form       = document.getElementById('contactForm');
   const submitBtn  = document.getElementById('submitBtn');
@@ -175,7 +181,6 @@ document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
 
-    // Validasi manual sederhana
     if (!form.from_name.value.trim()) {
       setStatus('⚠ Nama tidak boleh kosong.', 'error');
       form.from_name.focus();
@@ -192,22 +197,19 @@ document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
       return;
     }
 
-    // Loading state
     submitBtn.disabled  = true;
     btnText.textContent = 'Mengirim...';
     formStatus.style.display = 'none';
 
     try {
-      await emailjs.sendForm(EJS_SERVICE_ID, EJS_TEMPLATE_ID, form);
-
+      await emailjs.sendForm('service_80718gu', 'template_qqe2x98', form);
       setStatus('✓ Pesan berhasil dikirim! Saya akan segera membalas.', 'success');
       form.reset();
-
     } catch (err) {
       console.error('EmailJS error:', err);
       setStatus('✗ Gagal mengirim. Coba lagi atau hubungi langsung via email.', 'error');
-
     } finally {
       resetBtn();
     }
   });
+})();
