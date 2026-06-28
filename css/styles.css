@@ -710,6 +710,14 @@ nav.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,.07); background: rgba(245, 244
 .proj-link:hover { color: var(--green); }
 .proj-link svg { width: 13px; height: 13px; }
 
+/* Untuk icon CDN */
+.proj-thumb-icon i {
+  font-size: 22px;   
+  color: var(--white);   
+  opacity: 1;            
+}
+
+
 /* ============================================
    SERVICES
    ============================================ */
