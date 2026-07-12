@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-portfolio="web">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
@@ -41,6 +41,7 @@
       <li><a href="#services">Services</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    
 
     <a href="#contact" class="nav-btn">
       <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
@@ -48,7 +49,44 @@
       </svg>
       Let's Talk
     </a>
-
+    <a href="/Portofolio_Cyber/index.html"
+      class="nav-toggle"
+      aria-label="Switch to CyberSec portfolio">
+    
+      <!-- Label kiri: Web Dev (AKTIF saat di web portfolio) -->
+      <span class="nt-label nt-label-web">
+        <!-- Logo: kode bracket / terminal -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="16 18 22 12 16 6"/>
+          <polyline points="8 6 2 12 8 18"/>
+        </svg>
+        Web Dev
+      </span>
+    
+      <!-- Toggle Track -->
+      <span class="nt-track">
+        <span class="nt-knob">
+          <!-- Knob icon: Web = code icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"/>
+            <polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </span>
+      </span>
+    
+      <!-- Label kanan: CyberSec (TIDAK aktif saat di web portfolio) -->
+      <span class="nt-label nt-label-cyber">
+        <!-- Logo: perisai / shield -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        CyberSec
+      </span>
+    
+    </a>
     <button class="hamburger" id="hamburger" aria-label="Buka Menu">
       <span></span><span></span><span></span>
     </button>
@@ -499,17 +537,21 @@
       <div class="fade-up">
         <p style="margin-top:32px">
           Saya terbuka untuk proyek freelance, dan kolaborasi menarik!
-        </p>
-
-        <div class="contact-card">
+        </p>>
+        
+        <a href="mailto:tulaudittakeisha@gmail.com" target="_blank" rel="noopener noreferrer" class="contact-link">
+          <div class="contact-card">
           <div class="contact-card-icon">
-            <svg viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+            <svg viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+            </svg>
+            </div>
+            <div>
+              <div class="contact-card-label">Email</div>
+              <div class="contact-card-val">tulaudittakeisha@gmail.com</div>
+            </div>
           </div>
-          <div>
-            <div class="contact-card-label">Email</div>
-            <div class="contact-card-val">tulaudittakeisha@gmail.com</div>
-          </div>
-        </div>
+        </a>
 
         <a href="https://github.com/keisha-aqy" target="_blank" rel="noopener noreferrer" class="contact-link">
           <div class="contact-card">
