@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="id" data-portfolio="cyber">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/Portofolio_Cyber/css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!--Conntact-->
+  <script>
+    (function(){
+        emailjs.init("jFhFa0MX035yi3OGF");
+    })();
+  </script>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-logo">[<span>SECURE</span>_PORTFOLIO]</div>
+  <ul class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#certs">Certs</a>
+    <a href="#contact">Contact</a>
+  </ul>
+  <div class="nav-status">
+    <div class="status-dot"></div>
+    SYSTEM ONLINE
+  </div>
+
+  <a href="/index.html"
+   class="nav-toggle"
+   aria-label="Switch to Web Dev portfolio">
+ 
+  <!-- Label kiri: Web Dev (TIDAK aktif saat di cyber portfolio) -->
+  <span class="nt-label nt-label-web">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="16 18 22 12 16 6"/>
+      <polyline points="8 6 2 12 8 18"/>
+    </svg>
+    Web Dev
+  </span>
+ 
+  <!-- Toggle Track -->
+  <span class="nt-track">
+    <span class="nt-knob">
+      <!-- Knob icon: Cyber = shield icon -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+           stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+    </span>
+  </span>
+ 
+  <!-- Label kanan: CyberSec (AKTIF saat di cyber portfolio) -->
+  <span class="nt-label nt-label-cyber">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+    </svg>
+    CyberSec
+  </span>
+ 
+</a>
+
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-tag">Cybersecurity</div>
+    <h1 class="hero-name">
+      Keisha<br><span class="highlight">Tulauditta</span>
+    </h1>
+    <div class="hero-title">
+      <span id="typed-text">Threat Hunter</span><span class="cursor"></span>
+    </div>
+    <p class="hero-desc">
+      Melindungi aset digital dari ancaman siber melalui monitoring proaktif,
+      incident response, dan threat intelligence. Fokus pada Blue Team operations
+      dan defense-in-depth strategy.
+    </p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn-primary"><i class="fas fa-terminal"></i> Hubungi Saya</a>
+      <a href="#projects" class="btn-secondary"><i class="fas fa-folder-open"></i> Lihat Portofolio</a>
+    </div>
+  </div>
+
+  <!-- Terminal widget -->
+  <div class="hero-terminal">
+    <div class="terminal-bar">
+      <div class="terminal-dot t-red"></div>
+      <div class="terminal-dot t-yellow"></div>
+      <div class="terminal-dot t-green"></div>
+      <span class="terminal-title">soc-analyst@blueteam:~$</span>
+    </div>
+    <div class="terminal-body">
+      <div><span class="t-prompt">analyst@soc:~$</span> <span class="t-cmd">whoami</span></div>
+      <div class="t-out">SOC Analyst Level 1 | Blue Team</div>
+      <br>
+      <div><span class="t-prompt">analyst@soc:~$</span> <span class="t-cmd">cat expertise.txt</span></div>
+      <div><span class="t-blue"><i class="fas fa-angle-right"></i></span> SIEM Monitoring &amp; Analysis</div>
+      <div><span class="t-blue"><i class="fas fa-angle-right"></i></span> Incident Response (IR)</div>
+      <div><span class="t-blue"><i class="fas fa-angle-right"></i></span> Threat Hunting</div>
+      <div><span class="t-blue"><i class="fas fa-angle-right"></i></span> Log Analysis &amp; Correlation</div>
+      <div><span class="t-blue"><i class="fas fa-angle-right"></i></span> Network Traffic Analysis</div>
+      <br>
+      <div><span class="t-prompt">analyst@soc:~$</span> <span class="t-cmd">check_status</span></div>
+      <div><span class="t-ok"><i class="fas fa-check-circle"></i></span> Open to opportunities</div>
+      <div><span class="t-ok"><i class="fas fa-check-circle"></i></span> Available for interview</div>
+      <div><span class="t-warn"><i class="fas fa-bolt"></i></span> Ready to defend your SOC</div>
+      <br>
+      <div><span class="t-prompt">analyst@soc:~$</span> <span class="t-cyan">_</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<section>
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-num">10<span class="stat-plus">+</span></div>
+      <div class="stat-label">Labs Completed</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">3<span class="stat-plus">+</span></div>
+      <div class="stat-label">Certifications</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">2<span class="stat-plus">+</span></div>
+      <div class="stat-label">Incidents Analyzed</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">1<span class="stat-plus">+</span></div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-header">
+    <div class="section-label">Profile</div>
+    <h2 class="section-title">Tentang Saya</h2>
+  </div>
+
+  <div class="about-grid">
+    <!-- Avatar + skill bars -->
+    <div>
+      <div class="about-avatar">
+        <div class="avatar-placeholder">
+          <i class="fas fa-shield-haltered"></i>
+        </div>
+        <div class="avatar-corner tl"></div>
+        <div class="avatar-corner tr"></div>
+        <div class="avatar-corner bl"></div>
+        <div class="avatar-corner br"></div>
+      </div>
+
+      <div style="margin-top: 1.5rem;">
+        <div class="skill-bar-container">
+
+          <div class="skill-bar-item">
+            <div class="skill-bar-label">
+              <span>SIEM &amp; Log Analysis</span><span>85%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width:85%"></div>
+            </div>
+          </div>
+
+          <div class="skill-bar-item">
+            <div class="skill-bar-label">
+              <span>Incident Response</span><span>80%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width:80%"></div>
+            </div>
+          </div>
+
+          <div class="skill-bar-item">
+            <div class="skill-bar-label">
+              <span>Network Analysis</span><span>75%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width:75%"></div>
+            </div>
+          </div>
+
+          <div class="skill-bar-item">
+            <div class="skill-bar-label">
+              <span>Threat Hunting</span><span>70%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width:70%"></div>
+            </div>
+          </div>
+
+          <div class="skill-bar-item">
+            <div class="skill-bar-label">
+              <span>Malware Analysis</span><span>65%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width:65%"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Bio text -->
+    <div class="about-text">
+      <p>
+        Halo! Saya adalah seorang <strong style="color:var(--accent-cyan)">SOC Analyst Enthusiast</strong>
+        dengan fokus pada Blue Team Operations. Saat ini menempuh studi S1 Informatika dan aktif memperdalam pengetahuan di bidang cybersecurity melalui kursus online, bootcamp, serta praktik langsung menggunakan Virtual Machine.
+      </p>
+      <p>
+        Perjalanan saya di dunia keamanan siber dimulai dari rasa ingin tahu yang
+        mendalam tentang bagaimana sistem bisa diserang dan dipertahankan. Hal ini
+        mendorong saya untuk aktif berlatih melalui platform seperti
+        <strong style="color:var(--accent-blue)">Blue Team Labs Online</strong>,
+        serta mengikuti bootcamp SOC intensif.
+      </p>
+      
+      <ul style="list-style: none; padding-left: 0; margin: 20px 0;">
+        <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
+          <i class="fas fa-check-circle" style="color: var(--accent-blue); margin-right: 10px; margin-top: 4px;"></i>
+          <span>Berpengalaman menggunakan <strong>Nmap, Wazuh SIEM, Metasploit, dan MobSF</strong> untuk <em>vulnerability assessment</em>, <em>penetration testing</em>, serta analisis <em>security events</em>.</span>
+        </li>
+        <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
+          <i class="fas fa-check-circle" style="color: var(--accent-blue); margin-right: 10px; margin-top: 4px;"></i>
+          <span>Memiliki wawasan praktis dalam <strong>web application security</strong> dan monitoring sistem.</span>
+        </li>
+        <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
+          <i class="fas fa-check-circle" style="color: var(--accent-blue); margin-right: 10px; margin-top: 4px;"></i>
+          <span><em>Fast-learner</em>, teliti, dan selalu termotivasi untuk terus berkembang di bidang keamanan siber.</span>
+        </li>
+      </ul>
+
+      <p style="margin-top: 20px;">
+        Dengan kombinasi landasan akademis, pengalaman praktis, dan komitmen belajar berkelanjutan, saya siap berkontribusi dalam menjaga keamanan sistem dan data organisasi.
+      </p>
+      <div class="about-tags">
+        <span class="tag"><i class="fas fa-map-marker-alt"></i> Indonesia</span>
+        <span class="tag"><i class="fas fa-briefcase"></i> Open to Work</span>
+        <span class="tag"><i class="fas fa-crosshairs"></i> Entry - Mid Level</span>
+        <span class="tag"><i class="fas fa-globe-asia"></i> Remote Friendly</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-header">
+    <div class="section-label">Capabilities</div>
+    <h2 class="section-title">Keahlian Teknis</h2>
+  </div>
+
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
+      <div class="skill-name">SIEM &amp; Monitoring</div>
+      <div class="skill-tags">
+        <span class="tag">Elastic SIEM</span>
+        <span class="tag">Wazuh</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-icon"><i class="fas fa-search"></i></div>
+      <div class="skill-name">Network Analysis</div>
+      <div class="skill-tags">
+        <span class="tag">Wireshark</span>
+        <span class="tag">Suricata</span>
+        <span class="tag">Nmap</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-icon"><i class="fas fa-exclamation-triangle"></i></div>
+      <div class="skill-name">Incident Response</div>
+      <div class="skill-tags">
+        <span class="tag">IOC Analysis</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-icon"><i class="fas fa-brain"></i></div>
+      <div class="skill-name">Threat Intelligence</div>
+      <div class="skill-tags">
+        <span class="tag">VirusTotal</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-icon"><i class="fas fa-code"></i></div>
+      <div class="skill-name">Scripting &amp; Automation</div>
+      <div class="skill-tags">
+        <span class="tag">Python</span>
+        <span class="tag">Bash</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-icon"><i class="fas fa-bug"></i></div>
+      <div class="skill-name">Pentesting Tools</div>
+      <div class="skill-tags">
+        <span class="tag">Metasploit</span>
+        <span class="tag">Hydra</span>
+        <span class="tag">Burp Suite</span>
+    </div>
+  </div>
+      <div class="skill-card">
+      <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+      <div class="skill-name">Mobile Security</div>
+      <div class="skill-tags">
+        <span class="tag">MobSF</span>
+        <span class="tag">Static Analysis</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-header">
+    <div class="section-label">Journey</div>
+    <h2 class="section-title">Pengalaman &amp; Pelatihan</h2>
+  </div>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-date">2025</div>
+      <div class="timeline-title">Pelatihan Cyber Security & SOC</div>
+      <div class="timeline-org"><i class="fas fa-graduation-cap"></i> JadiHacker.id</div>
+      <div class="timeline-desc">
+        Mengikuti program bootcamp intensif SOC selama 1 bulan, mempelajari
+        dasar keamanan siber dan jaringan. Melakukan simulasi serangan dasar menggunakan kali linux dan oraktik langsung dengan tools seperti Wazuh SIEM dalam lingkungan simulasi Virtual Machine.
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2025</div>
+      <div class="timeline-title">Workshop Cybersecurity</div>
+      <div class="timeline-org"><i class="fas fa-flask"></i> ID-Networkers</div>
+      <div class="timeline-desc">
+        Praktik menggunakan Burp Suite dan platform PortSwigger untuk mengidentifikasi celah keamanan pada aplikasi web.
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2026</div>
+      <div class="timeline-title">Ethical Hacking Capstone Project: Breach, Response, AI</div>
+      <div class="timeline-org"><i class="fas fa-user-shield"></i> IBM</div>
+      <div class="timeline-desc">
+        Dalam praktik keamanan siber, saya melakukan pengintaian jaringan terhadap server Linux menggunakan Nmap untuk mengidentifikasi layanan terbuka dan potensi area serangan, 
+        memantau serta menyelidiki peristiwa keamanan melalui Wazuh SIEM dan Suricata IDS, menyusun Laporan Respons Insiden yang mencakup ringkasan eksekutif, linimasa serangan, indikator kompromi (IOC), penilaian dampak, rekomendasi mitigasi, serta rencana pemulihan, dan mensimulasikan eksploitasi layanan VSFTPD 2.3.4 yang rentan dengan Metasploit Framework untuk memperoleh 
+        akses jarak jauh dalam lingkungan VirtualMachine.
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2025 - sekarang</div>
+      <div class="timeline-title">Self-Learning</div>
+      <div class="timeline-org"><i class="fas fa-book"></i> TryHackMe | BTLO</div>
+      <div class="timeline-desc">
+        Aktif belajar mandiri melalui platform online, menyelesaikan learning path
+        Blue Team di TryHackMe dan BlueTeam Labs Online.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-header">
+    <div class="section-label">Portfolio</div>
+    <h2 class="section-title">Proyek &amp; Lab Report</h2>
+  </div>
+
+  <div class="projects-grid">
+
+    <a href="https://docs.google.com/document/d/16pE4jDyqg1AiQYLn9h7d6umps14b0b3ZTZrtMDWYlSg/edit?usp=sharing" target="_blank" class="project-link">
+      <div class="project-card">
+        <span class="project-badge"><i class="fas fa-chart-bar"></i> SIEM · Incident Report</span>
+        <div class="project-title">Incident Report</div>
+        <p class="project-desc">
+          Dokumen singkat yang mencatat detail insiden keamanan, mulai dari ringkasan eksekutif, linimasa kejadian, indikator kompromi (IoC), analisis dampak, hingga langkah respons dan rekomendasi mitigasi
+        </p>
+        <div class="project-tools">
+          <span class="tag">Wazuh</span>
+          <span class="tag">Suricata</span>
+          <span class="tag">VirusTotal</span>
+        </div>
+      </div>      
+    </a>
+
+    <a href="https://blueteamlabs.online/public/user/4a26ec7679129ed3c6737c" target="_blank" class="project-link">
+    <div class="project-card">
+      <span class="project-badge"><i class="fas fa-network-wired"></i> Blue Team Labs Online</span>
+      <div class="project-title">Challenge</div>
+      <p class="project-desc">
+        Melatih keterampilan analisis log, deteksi ancaman, investigasi insiden, dan penerapan teknik Blue Team dalam simulasi lingkungan keamanan siber.
+      </p>
+      <div class="project-tools">
+      </div>
+    </div>
+    </a>
+
+    <a href="https://uas-keamanan-data-jaringan.vercel.app/" target="_blank" class="project-link">
+    <div class="project-card">
+      <span class="project-badge"><i class="fas fa-desktop"></i> Kriptografi</span>
+      <div class="project-title">Digital Signature</div>
+      <p class="project-desc">
+        Implementasi tanda tangan digital untuk keamanan data dan verifikasi integritas dokumen menggunakan algoritma RSA dan SHA-256.
+      </p>
+      <div class="project-tools">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JS</span>
+        <span class="tag">Python</span>
+      </div>
+    </div>
+    </a>
+</section>
+
+<hr class="divider">
+
+<!-- CERTIFICATIONS -->
+<section id="certs">
+  <div class="section-header">
+    <div class="section-label">Credentials</div>
+    <h2 class="section-title">Sertifikasi &amp; Achievement</h2>
+  </div>
+
+  <div class="cert-grid">
+
+    <div class="cert-card">
+      <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+      <div>
+        <div class="cert-name">Ethical Hacking Capstone Project: Breach, Response, AI</div>
+        <div class="cert-issuer">IBM</div>
+        <div class="cert-status"><i class="fas fa-check"></i> COMPLETED</div>
+      </div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-icon"><i class="fas fa-award"></i></div>
+      <div>
+        <div class="cert-name">L1 SOC Analyst Batch 09</div>
+        <div class="cert-issuer">JadiHacker</div>
+        <div class="cert-status"><i class="fas fa-check"></i> COMPLETED</div>
+      </div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-icon"><i class="fas fa-medal"></i></div>
+      <div>
+        <div class="cert-name">Workshop Cybersecurity</div>
+        <div class="cert-issuer">ID-Networkers (IDN.ID)</div>
+        <div class="cert-status"><i class="fas fa-check"></i> COMPLETED</div>
+      </div>
+    </div>
+
+    <div class="cert-card cert-inprogress">
+      <div class="cert-icon"><i class="fas fa-clock"></i></div>
+      <div>
+        <div class="cert-name">Sertifikasi Berikutnya</div>
+        <div class="cert-issuer">#</div>
+        <div class="cert-status"><i class="fas fa-spinner"></i> IN PROGRESS</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="contact">
+
+  <div class="section-header">
+    <div class="section-label">Reach Out</div>
+    <h2 class="section-title">Hubungi Saya</h2>
+  </div>
+
+  <div class="contact-wrapper">
+
+    <!-- ── Info kiri ── -->
+    <div class="contact-info">
+      <p>
+        Saya terbuka untuk peluang kerja sebagai SOC Analyst, Security Analyst, atau
+        Blue Team Engineer. Jika Anda mencari seseorang yang passionate, terus belajar,
+        dan siap berkontribusi — mari terhubung!
+      </p>
+
+      <div class="contact-links">
+
+        <a href="mailto:tulaudittakeisha@gmail.com" class="contact-link">
+          <span class="contact-link-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </span>
+          <span>tulaudittakeisha@gmail.com</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/keishatulauditta"
+           target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </span>
+          <span>linkedin.com/in/keishatulauditta</span>
+        </a>
+
+        <a href="https://github.com/keisha-aqy"
+           target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+          </span>
+          <span>github.com/keisha-aqy</span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1LCx8KtG7LmSe_rWf50kOXHov35FCdI_l/view?usp=drive_link"
+           target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="12" y1="18" x2="12" y2="12"/>
+              <line x1="9" y1="15" x2="15" y2="15"/>
+            </svg>
+          </span>
+          <span>Lihat CV</span>
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- ── Form kanan ── -->
+    <form class="cform" id="contactForm" novalidate>
+
+      <div class="frow">
+        <div class="fgroup">
+          <label for="from_name">Nama</label>
+          <input type="text" id="from_name" name="from_name"
+                 placeholder="Nama kamu" required autocomplete="name"/>
+        </div>
+        <div class="fgroup">
+          <label for="from_email">Email</label>
+          <input type="email" id="from_email" name="from_email"
+                 placeholder="email@kamu.com" required autocomplete="email"/>
+        </div>
+      </div>
+
+      <div class="fgroup">
+        <label for="subject">Subjek</label>
+        <input type="text" id="subject" name="subject"
+               placeholder="Topik pesan kamu"/>
+      </div>
+
+      <div class="fgroup">
+        <label for="message">Pesan</label>
+        <textarea id="message" name="message"
+                  placeholder="Ceritakan ide atau proyekmu..."
+                  required></textarea>
+      </div>
+
+      <div class="form-status" id="formStatus" role="alert" aria-live="polite"></div>
+
+      <button type="submit" class="submit-btn" id="submitBtn">
+        <svg width="14" height="14" fill="none" stroke="currentColor"
+             stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+        </svg>
+        <span id="btnText">Kirim Pesan</span>
+      </button>
+
+    </form>
+
+  </div><!-- /.contact-wrapper -->
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-copy">
+    &copy; 2026 <span>Keisha Tulauditta</span> · SOC Analyst Portfolio
+  </div>
+  <div class="footer-copy">
+    Built with <i class="fas fa-heart" style="color: var(--danger);"></i> for <span>Blue Team</span> Community
+  </div>
+</footer>
+
+<script src="/Portofolio_Cyber/js/script.js"></script>
+</body>
+</html>

@@ -1213,3 +1213,121 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
+
+/* ── PORTFOLIO TOGGLE SWITCH ── */
+.nav-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+ 
+/* Label kiri: Web Dev */
+.nt-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  white-space: nowrap;
+  transition: opacity .25s, color .25s;
+  user-select: none;
+}
+.nt-label svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+ 
+/* ── TRACK (rel container) ── */
+.nt-track {
+  position: relative;
+  width: 52px;
+  height: 26px;
+  border-radius: 999px;
+  flex-shrink: 0;
+  transition: background .35s, box-shadow .35s;
+  cursor: pointer;
+}
+ 
+/* ── KNOB ── */
+.nt-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .35s cubic-bezier(.4,0,.2,1), background .3s;
+  box-shadow: 0 1px 4px rgba(0,0,0,.25);
+}
+.nt-knob svg {
+  width: 11px;
+  height: 11px;
+}
+ 
+ 
+/* ════════ WEB PORTFOLIO STATE ════════
+   Active side  = Web Dev  (LEFT / OFF)
+   Inactive side= CyberSec (RIGHT / ON)  */
+ 
+/* Web portfolio — toggle is LEFT (web active) */
+[data-portfolio="web"] .nt-track {
+  background: var(--dark, #1A1A2E);
+  box-shadow: inset 0 0 0 1.5px var(--border, #E2E0D8);
+}
+[data-portfolio="web"] .nt-knob {
+  transform: translateX(0);
+  background: var(--yellow, #F5C518);
+}
+[data-portfolio="web"] .nt-label-web {
+  color: var(--dark, #1A1A2E);
+  opacity: 1;
+}
+[data-portfolio="web"] .nt-label-cyber {
+  color: var(--gray, #6B7280);
+  opacity: .55;
+}
+ 
+/* ════════ CYBER PORTFOLIO STATE ════════
+   Active side  = CyberSec (RIGHT / ON)
+   Inactive side= Web Dev  (LEFT / OFF)  */
+ 
+[data-portfolio="cyber"] .nt-track {
+  background: #00CC66;
+  box-shadow: 0 0 12px rgba(0,255,136,.35);
+}
+[data-portfolio="cyber"] .nt-knob {
+  transform: translateX(26px);
+  background: #050A0F;
+}
+[data-portfolio="cyber"] .nt-knob svg {
+  filter: brightness(0) invert(1);
+}
+[data-portfolio="cyber"] .nt-label-cyber {
+  color: #00FF88;
+  opacity: 1;
+}
+[data-portfolio="cyber"] .nt-label-web {
+  color: #3A6A80;
+  opacity: .55;
+}
+ 
+/* Hover feedback on track */
+.nav-toggle:hover .nt-track {
+  filter: brightness(1.12);
+}
+ 
+/* Mobile: hide labels, keep only the toggle */
+@media (max-width: 760px) {
+  .nt-label { display: none; }
+  .nt-track  { width: 44px; height: 22px; }
+  .nt-knob   { width: 16px; height: 16px; top: 3px; left: 3px; }
+  [data-portfolio="cyber"] .nt-knob { transform: translateX(22px); }
+}
